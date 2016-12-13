@@ -1,5 +1,5 @@
 @import './assets/css/bootstrapGrid.css';
-
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz|Bangers');
 
 body {
   margin: 0;
@@ -8,6 +8,11 @@ body {
   background-color: white;
   text-transform: uppercase;
 }
+
+.home, button , #search {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
 .app{
   color: white;
 }
@@ -23,13 +28,17 @@ body {
   padding-bottom: 1em;
   margin-bottom: 2em;
   border-radius: 1em;
-  border: 3px solid black;
+  border: 3px solid #e91e63;
 }
 
 .home{
   margin-top: 2em;
   min-height: 25em;
   min-width: 30em;
+}
+
+.home h1{
+  font-size: 3em;
 }
 
 .posterBackground{
@@ -45,6 +54,7 @@ body {
 .answer {
   padding: 1em;
   margin-bottom: 1em;
+  border: 2px solid white;
   border-radius: 1em;
   background-color: rgba(255,255,255,0.5);
   list-style: none;
@@ -52,14 +62,32 @@ body {
 }
 
 .answer:hover{
+  border: 2px solid #e91e63;
   background-color: rgba(255,255,255,0.7);
 }
 
 button{
-    background-color: #0092FF;
+    background-color: #e91e63;
     color: white;
+    font-size: 1em;
     border-radius: 5px;
     padding: 1em;
     margin: .5em;
     border:none;
+    cursor: pointer;
+}
+
+button:hover{
+  color: #e91e63;
+  background-color: white;
+}
+
+.startQuizButton{
+  font-size: 2em;
+}
+
+#search{
+  border: 3px solid #e91e63;
+  border-radius: 1em;
+  font-size: 1.5em;
 }

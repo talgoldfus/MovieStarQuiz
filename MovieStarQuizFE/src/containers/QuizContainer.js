@@ -9,9 +9,9 @@ class QuizContainer extends Component {
   renderResult(movie){
 
     return (
-      <div>
-        <h2>Your answer is {this.props.correct ? "correct" : "wrong"}</h2>
-        <h3>{movie.title} was released on {movie.release_date.toDateString().substring(4)}</h3>
+      <div className="row">
+        <h2 className="col-xs-8 col-xs-offset-2">Your answer is {this.props.correct ? "correct" : "wrong"}</h2>
+        <h3 className="col-xs-8 col-xs-offset-2">{movie.title} was released on {movie.release_date.toDateString().substring(4)}</h3>
       </div>
     )
   }
@@ -34,7 +34,7 @@ class QuizContainer extends Component {
     }
 
   renderQuestion(){
-    return <h3 className="col-xs-8 col-xs-offset-2">When was {this.props.movie.title} released ? </h3>
+    return <h2 className="col-xs-8 col-xs-offset-2">When was {this.props.movie.title} released ? </h2>
   }
 
   render(){
