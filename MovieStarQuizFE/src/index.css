@@ -5,7 +5,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-color: grey;
+  background-color: white;
   text-transform: uppercase;
 }
 .app{
@@ -15,10 +15,10 @@ body {
   text-align: center;
 }
 
-
-
 .quizContainer, .home{
-  background: url('./assets/images/bg.png') no-repeat;
+  background: url('./assets/images/bg-game-1.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
   text-align: center;
   padding-bottom: 1em;
   margin-bottom: 2em;
@@ -27,6 +27,7 @@ body {
 }
 
 .home{
+  margin-top: 2em;
   min-height: 25em;
   min-width: 30em;
 }
