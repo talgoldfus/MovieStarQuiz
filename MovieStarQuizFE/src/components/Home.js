@@ -11,7 +11,7 @@ const Home = props => {
           <div className="row">
             <h1>Movie Release Quiz</h1>
             <div className="col-xs-12">
-              <h2>Start with a random actor</h2>
+              <h2>Quick start</h2>
               <PlayNewGameButton buttonText={"START PLAYING"} className="startQuizButton col-xs-4 col-xs-offset-4"/>
             </div>
             <div className="col-xs-12">

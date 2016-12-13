@@ -22,9 +22,9 @@ class SearchBar extends Component {
   render(){
     return (
       <form
-          className="col-xs-offset-1 col-xs-10 searchBar"
+          className="searchBar col-xs-12"
           onSubmit={ event =>this.handleSubmit(event)}>
-            <input id="search"  ref='search' type="text" placeholder="Search Actors" />
+            <input id="search" className="col-xs-offset-2 col-xs-6" ref='search' type="text" placeholder="Search Actors" />
       </form>
     );
   }
