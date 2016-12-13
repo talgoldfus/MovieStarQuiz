@@ -36,6 +36,12 @@ C) Api reads query strings parameters and returns all give actors movies and per
 
 C) Api returns a default query of Liam Neesons movies if the given actor in the query string cannot be found : api/v1/actors?actor=sdjhsk
 
+## Stack:
+
+Front End : Node.js , React , Redux , HTML , CSS
+
+Back End : Rails 5 API  , Ruby
+
 ## Installing and playing the game localy 
 
 A)Clone the repo to your local machine.
