@@ -8,7 +8,6 @@ const gameReducer = function(state = {answered: false }, action) {
                     userAnsweredCorrect: action.payload.userIsCorrect
                 }
         case 'SUBMITTED_SEARCH':
-        debugger
                 return {
                     ...state,
                     submittedSearch: action.payload
