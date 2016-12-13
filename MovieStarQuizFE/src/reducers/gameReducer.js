@@ -7,6 +7,12 @@ const gameReducer = function(state = {answered: false }, action) {
                     answered: action.payload.submitted,
                     userAnsweredCorrect: action.payload.userIsCorrect
                 }
+        case 'SUBMITTED_SEARCH':
+        debugger
+                return {
+                    ...state,
+                    submittedSearch: action.payload
+                }
         default:
             return state;
     }

@@ -16,10 +16,12 @@ body {
 }
 
 .home{
-  background: url('./assets/images/home-bg.jpg') no-repeat;
+  background: url('./assets/images/bg.png') no-repeat;
   background-size: contain;
+  background-position: center;
   min-height: 20em;
   min-width: 20em;
+  text-align: center;
 }
 
 .quizContainer{

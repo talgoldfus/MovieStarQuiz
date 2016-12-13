@@ -1,4 +1,10 @@
 import axios from 'axios'
+import { browserHistory } from 'react-router'
+
+
+function retrySearch(error){
+    alert("Are you sure you typed the right name? Please try again")
+}
 
 export const getActorDetails = (actorName) => {
     return axios({
@@ -10,7 +16,15 @@ export const getActorDetails = (actorName) => {
             type: 'GET_ACTOR_FROM_API',
             payload: response.data.results
         }
-    })
+    },
+    () => {
+      retrySearch()
+      return {
+          type: 'SUBMITTED_SEARCH',
+          payload: false
+      }
+    }
+  )
 }
 
 

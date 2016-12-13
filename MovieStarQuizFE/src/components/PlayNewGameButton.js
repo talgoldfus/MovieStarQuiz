@@ -2,7 +2,8 @@ import React , {Component} from 'react';
 import {connect} from 'react-redux'
 import {browserHistory} from 'react-router'
 import getMovieQuiz from '../actions/getMovieQuiz'
-import submitedAnswer from '../actions/submitedAnswer'
+import submittedAnswer from '../actions/submittedAnswer'
+import submittedSearch from '../actions/submittedSearch'
 
 
 class PlayNewGameButton extends Component{
@@ -11,7 +12,8 @@ class PlayNewGameButton extends Component{
       let randIndex = Math.floor(Math.random() * this.props.movieList.length)
       let movieID = this.props.movieList[randIndex].id
       this.props.getMovieQuiz(movieID)
-      this.props.submitedAnswer(false,null)
+      this.props.submittedAnswer(false,null)
+      this.props.submittedSearch(false)
       browserHistory.push(`/quiz/${movieID}`)
     }
 
@@ -29,4 +31,4 @@ function mapStateToProps(state){
   return {movieList: state.movies.movieList}
 }
 
-export default connect(mapStateToProps,{getMovieQuiz,submitedAnswer})(PlayNewGameButton);
+export default connect(mapStateToProps,{getMovieQuiz,submittedAnswer,submittedSearch})(PlayNewGameButton);

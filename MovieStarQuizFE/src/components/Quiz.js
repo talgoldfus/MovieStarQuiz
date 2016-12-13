@@ -3,6 +3,8 @@ import {connect} from 'react-redux'
 import { withRouter } from 'react-router'
 import Answer from './Answer'
 import PlayNewGameButton from './PlayNewGameButton'
+import HomeButton from './HomeButton'
+
 
 class Quiz extends Component {
 
@@ -46,7 +48,7 @@ class Quiz extends Component {
 
     return (
       <div>
-        <h2>You are answer is {this.props.correct ? "correct" : "wrong"}</h2>
+        <h2>Your answer is {this.props.correct ? "correct" : "wrong"}</h2>
         <h3>{movie.title} was released on {movie.release_date.toDateString().substring(4)}</h3>
       </div>
     )
@@ -56,10 +58,15 @@ class Quiz extends Component {
   renderReplay(){
       return(
         <div className="row">
-          <div className="col-xs-4 col-xs-offset-4">
+          <div className="col-xs-3 col-xs-offset-2">
               <PlayNewGameButton
-              buttonText={'Play Again'}
+              buttonText={'PLAY ANOTHER ROUND'}
               className="replyQuizButton"/>
+          </div>
+          <div className="col-xs-3">
+              <HomeButton
+               buttonText={'CHOOSE NEW ACTOR'}
+              />
           </div>
         </div>
       )

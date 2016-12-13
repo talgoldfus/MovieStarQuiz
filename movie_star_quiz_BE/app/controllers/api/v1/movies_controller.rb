@@ -9,7 +9,6 @@ module Api
             {:api_key => KEY,
              :query => params[:actor] })
             if actor.parsed_response["results"].empty?
-              byebug
               actor = HTTParty.get('https://api.themoviedb.org/3/search/person',:query =>
               {:api_key => KEY,
                :query => "Liam Neeson" })

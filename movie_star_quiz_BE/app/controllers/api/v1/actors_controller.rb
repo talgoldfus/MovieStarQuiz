@@ -9,7 +9,12 @@ module Api
              :api_key => KEY,
              :query => params[:actor]
              })
-            render json: actor.parsed_response
+
+             if actor.parsed_response["total_results"] != 0
+               render json: actor.parsed_response
+             else
+               render status: 404
+             end
           end
         end
 

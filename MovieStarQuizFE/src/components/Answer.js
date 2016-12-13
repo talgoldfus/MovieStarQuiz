@@ -1,15 +1,15 @@
 import React , {Component} from 'react';
 import {connect} from 'react-redux'
-import submitedAnswer from '../actions/submitedAnswer'
+import submittedAnswer from '../actions/submittedAnswer'
 
 class Answer extends Component{
 
     componentWillMount(){
-      this.props.submitedAnswer(false,null)
+      this.props.submittedAnswer(false,null)
     }
 
     handleClick(){
-      this.props.submitedAnswer(true,this.props.correct)
+      this.props.submittedAnswer(true,this.props.correct)
     }
 
 
@@ -25,4 +25,4 @@ class Answer extends Component{
 
 }
 
-export default connect(null,{submitedAnswer})(Answer)
+export default connect(null,{submittedAnswer})(Answer)

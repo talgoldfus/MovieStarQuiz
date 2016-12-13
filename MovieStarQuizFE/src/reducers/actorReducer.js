@@ -2,7 +2,7 @@ const actorReducer = function(state = { details:{} },action) {
 
         switch (action.type) {
             case 'GET_ACTOR_FROM_API':
-                let actor = action.payload
+                let actor = action.payload[0]
                 let actorDetails = Object.assign({}, {
                     id: actor.id,
                     name: actor.name,
