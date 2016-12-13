@@ -5,12 +5,13 @@ import { Provider } from 'react-redux'
 import ReduxPromise from 'redux-promise'
 import reduxThunk from 'redux-thunk';
 import reducer from './reducers/index'
+import {enableBatching} from 'redux-batched-actions';
 import { Router,browserHistory } from 'react-router'
 import Routes from './routes'
 
 let createStoreWithMiddleware = applyMiddleware(reduxThunk, ReduxPromise)(createStore)
 let store = createStoreWithMiddleware(
-  reducer,
+  enableBatching(reducer),
   window.devToolsExtension ? window.devToolsExtension() : f => f
 )
 

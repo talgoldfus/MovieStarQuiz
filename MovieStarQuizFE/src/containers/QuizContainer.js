@@ -19,16 +19,12 @@ class QuizContainer extends Component {
   renderReplay(){
       return(
         <div className="row">
-          <div className="col-xs-3 col-xs-offset-2">
               <PlayNewGameButton
               buttonText={'PLAY ANOTHER ROUND'}
               className="replyQuizButton"/>
-          </div>
-          <div className="col-xs-3">
               <HomeButton
                buttonText={'CHOOSE NEW ACTOR'}
               />
-          </div>
         </div>
       )
     }
@@ -41,7 +37,7 @@ class QuizContainer extends Component {
 
     return (
       <div className="row">
-        <div className="quizContainer col-xs-8 col-xs-offset-2  col-sm-6 col-sm-offset-3 col-md-5 col-md-offset-3.5">
+        <div className="quizContainer col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-3 col-md-5 col-md-offset-3.5">
           <div className="row">
             {this.props.movie && !this.props.answered ?  this.renderQuestion() : null}
             <img
@@ -49,7 +45,11 @@ class QuizContainer extends Component {
               alt={this.props.movie.title}
               src={this.props.movie.poster_path}
             />
-            {this.props.movie && !this.props.answered ? <Quiz movie={this.props.movie} /> : this.renderResult(this.props.movie) }
+            {
+              this.props.movie && !this.props.answered ?
+              <Quiz movie={this.props.movie} />
+              : this.renderResult(this.props.movie)
+            }
           </div>
           {this.props.answered ? this.renderReplay() : null }
         </div>

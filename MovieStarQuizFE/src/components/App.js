@@ -1,13 +1,12 @@
 import React , {Component} from 'react';
 import {connect} from 'react-redux'
-import {getActorMovies,getActorDetails}  from '../actions/grabFromAPI'
+import {grabQuizInfo}  from '../actions/grabFromAPI'
 import '../index.css'
 
 class App extends Component {
 
   componentWillMount(){
-    this.props.getActorDetails("Brad Pitt")
-    this.props.getActorMovies("Brad Pitt")
+    this.props.grabQuizInfo("Brad Pitt")
   }
 
   render(){
@@ -20,4 +19,4 @@ class App extends Component {
 
 }
 
-export default connect(null,{getActorMovies,getActorDetails})(App);
+export default connect(null,{grabQuizInfo})(App);
