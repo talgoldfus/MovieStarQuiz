@@ -2,8 +2,6 @@ import React  from 'react';
 import PlayNewGameButton from './PlayNewGameButton'
 import SearchActorContainer from '../containers/SearchActorContainer'
 
-
-
 const Home = props => {
     return (
       <div className="row">
@@ -23,7 +21,5 @@ const Home = props => {
       </div>
     );
 }
-
-
 
 export default Home

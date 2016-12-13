@@ -3,7 +3,6 @@ import {connect} from 'react-redux'
 import {getActorMovies,getActorDetails}  from '../actions/grabFromAPI'
 import '../index.css'
 
-
 class App extends Component {
 
   componentWillMount(){
@@ -20,7 +19,5 @@ class App extends Component {
   }
 
 }
-
-
 
 export default connect(null,{getActorMovies,getActorDetails})(App);

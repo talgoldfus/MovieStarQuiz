@@ -5,7 +5,6 @@ import getMovieQuiz from '../actions/getMovieQuiz'
 import submittedAnswer from '../actions/submittedAnswer'
 import submittedSearch from '../actions/submittedSearch'
 
-
 class PlayNewGameButton extends Component{
 
     handleClick(){

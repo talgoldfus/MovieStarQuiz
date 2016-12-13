@@ -1,6 +1,4 @@
 import axios from 'axios'
-import { browserHistory } from 'react-router'
-
 
 function retrySearch(error){
     alert("Are you sure you typed the right name? Please try again")

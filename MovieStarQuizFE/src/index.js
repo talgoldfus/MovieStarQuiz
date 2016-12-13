@@ -8,18 +8,13 @@ import reducer from './reducers/index'
 import { Router,browserHistory } from 'react-router'
 import Routes from './routes'
 
-
-
-  let createStoreWithMiddleware = applyMiddleware(reduxThunk, ReduxPromise)(createStore)
-  let store = createStoreWithMiddleware(
-    reducer,
-    window.devToolsExtension ? window.devToolsExtension() : f => f
-  )
-
-
+let createStoreWithMiddleware = applyMiddleware(reduxThunk, ReduxPromise)(createStore)
+let store = createStoreWithMiddleware(
+  reducer,
+  window.devToolsExtension ? window.devToolsExtension() : f => f
+)
 
 ReactDOM.render(
-
   <Provider store={store} >
     <Router history={browserHistory} routes={Routes(store)}/>
   </Provider>,
