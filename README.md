@@ -14,15 +14,15 @@ https://movie-release-quiz-api.herokuapp.com/api/v1/actors
 
 ###GAME:
 
-A) User can search his favorite actors / movie personas and get quized upon their movie release dates
+A) User can search his favorite actors / movie personas and get quizzed upon their movie release dates
 
 B) Upon user answer he is shown the correct result and given feedback on his answer
 
 C) Upon answering the quiz a user is given a choice to play another round with a different movie or choose another actor
 
-D) If a user enters a movie persona/actor that is not found in the databse it reciveis a message that prompts him to play with Liam Neesons movies
+D) If a user enters a movie persona/actor that is not found in the database it receives a message that prompts him to play with Liam Neeson's movies
 
-E) If a user enters a movie persona/actor that returns more then one obvious person it reciveis a message asking him to make an additioal search
+E) If a user enters a movie persona/actor that returns more then one obvious person it receives a message asking him to make an additional search
 
 F) The game is responsive and friendly to all the various device sizes including mobile
 
@@ -42,7 +42,7 @@ Front End : Node.js , React , Redux , HTML , CSS
 
 Back End : Rails 5 API  , Ruby
 
-## Installing and playing the game localy 
+## Installing and playing the game locally 
 
 A)Clone the repo to your local machine.
 
@@ -53,4 +53,3 @@ B)Cd into the movie-release-quiz-front folder and run npm install ($ npm install
 D)To play the game start the rails server via $rails s command (while in the movie-release-quiz-back folder) 
 
 E)Start the front end application via $ npm start (while in the movie-release-quiz-front folder) . If the browser hasn't opened automatically open your browser in http://localhost:3001/
-
